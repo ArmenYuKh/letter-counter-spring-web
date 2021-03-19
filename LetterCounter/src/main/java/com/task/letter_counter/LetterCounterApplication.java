@@ -1,4 +1,4 @@
-package com.task.LetterCounter;
+package com.task.letter_counter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

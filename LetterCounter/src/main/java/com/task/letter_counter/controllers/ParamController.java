@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ParamController {
-    @GetMapping("/params/requestParams")
+    @GetMapping("/wordanalyzer/analyze")
     public ResponseEntity responseParam(@RequestParam("word") String word) {
         return new ResponseEntity(new RequestParamDTO(word), HttpStatus.OK);
     }

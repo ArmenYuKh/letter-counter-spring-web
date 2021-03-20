@@ -1,17 +1,32 @@
 package com.task.letter_counter.dto;
 
 public class RequestParamDTO {
-    private String name;
+    private String word;
+    private String letter;
+    private int count;
 
-    public RequestParamDTO(String name) {
-        this.name = name;
+    public RequestParamDTO() {
     }
 
-    public String getName() {
-        return name;
+    public RequestParamDTO(String word) {
+        this.word = word;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public RequestParamDTO(String letter, int count) {
+        this.letter = letter;
+        this.count = count;
+    }
+
+    public String getWord() {
+        return word;
+    }
+
+    public String getLetter() {
+        return letter;
+    }
+
+
+    public int getCount() {
+        return count;
     }
 }

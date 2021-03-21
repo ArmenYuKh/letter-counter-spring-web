@@ -8,8 +8,6 @@ import java.util.*;
 
 @Service
 public class RequestParamDTOService {
-    RequestParamDTO requestParamDTO = new RequestParamDTO();
-
     public RequestParamDTO analyze (String word) {
         Map<Character, Integer> map = new LinkedHashMap<>();
         List<Character> list = new LinkedList<>();

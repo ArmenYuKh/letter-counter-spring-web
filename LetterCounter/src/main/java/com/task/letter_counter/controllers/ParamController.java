@@ -14,14 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ParamController {
     @Autowired
     private RequestParamDTOService requestParamDTOService;
+
     @GetMapping("/wordanalyzer/analyze")
-    public ResponseEntity<RequestParamDTO> responseParam(@RequestParam("word") String word) {
-        String letter;
-        int count = 0;
-        RequestParamDTOService requestParamDTOService = new RequestParamDTOService();
+    public ResponseEntity<ResponseParamDTO> responseParam(@RequestParam("word") String word) {
         RequestParamDTO requestParamDTO = requestParamDTOService.analyze(word);
-        letter = requestParamDTO.getLetter();
-        count = requestParamDTO.getCount();
-        return new ResponseEntity(new ResponseParamDTO(letter, count), HttpStatus.OK);
+        String letter = requestParamDTO.getLetter();
+        int count = requestParamDTO.getCount();
+        return new ResponseEntity<>(new ResponseParamDTO(letter, count), HttpStatus.OK);
     }
 }

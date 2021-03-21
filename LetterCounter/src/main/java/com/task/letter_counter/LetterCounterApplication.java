@@ -8,9 +8,7 @@ import java.util.*;
 
 @SpringBootApplication
 public class LetterCounterApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(LetterCounterApplication.class, args);
 	}
-
 }
